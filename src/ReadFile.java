@@ -16,9 +16,10 @@ public class ReadFile {
         File inputFile = new File("hello.txt");
         //Read the message into a string variable and print it.
         Scanner sc = new Scanner(inputFile);
-        while (sc.hasNext()) {
+        while (sc.hasNextLine()) {
             String text = sc.nextLine();
             System.out.println(text);
         }
+        sc.close();
     }
 }
