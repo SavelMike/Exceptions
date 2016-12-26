@@ -28,7 +28,7 @@ public class FileName {
         int strNum = 1;
 
         //6. Read each line and send it to the output file, preceded by line numbers //
-        while (sc.hasNextLine()) {
+        while (sc.hasNext()) {
             String next = sc.nextLine();
             output.println("/ " + strNum + " /" + next);
             strNum++;
