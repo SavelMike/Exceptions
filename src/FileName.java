@@ -28,10 +28,13 @@ public class FileName {
         int strNum = 1;
 
         //6. Read each line and send it to the output file, preceded by line numbers //
-        while (sc.hasNext()) {
+        while (in.hasNextLine()) {
             String next = sc.nextLine();
             output.println("/ " + strNum + " /" + next);
             strNum++;
         }
+        // 7. close Scanner and PrintWrite
+        sc.close();
+        in.close();
     }
 }
