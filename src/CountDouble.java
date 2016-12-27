@@ -11,10 +11,10 @@ public class CountDouble {
         Scanner in = new Scanner(System.in);
         System.out.println("Input filename: ");
         String filename = in.next();
-        //// 2 открыть файл для чтения при помощи сканера связаного с файлом по имени filename
+        // 2 открыть файл для чтения при помощи сканера связаного с файлом по имени filename
         File f = new File(filename);
-        //3// 3 получать из сканера созданного в пункте double-ы пока они есть и складывать
         Scanner sc = new Scanner(f);
+        // 3 получать из сканера созданного в пункте double-ы пока они есть и складывать
         double sum1 = 0;
         double sum2 = 0;
         int counter = 0;
@@ -30,6 +30,6 @@ public class CountDouble {
             }
             counter++;
         }
-        System.out.println("Sum1 = " + sum1 + ", Sum2 = " + sum2);
+        System.out.println("Average of first column: " + sum2 / n2 + ", average of second column: " + sum1 / n1);
     }
 }
