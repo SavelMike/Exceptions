@@ -9,14 +9,27 @@ import java.util.Scanner;
 public class FileName {
     public static void main(String[] args) throws FileNotFoundException {
 
-        // 1.ask user for input file name
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter inputfile name: ");
-        String filename1 = sc.next();
+        String filename1 = "";
+        String filename2 = "";
+        if (args.length == 0) {
+            // 1.ask user for input file name
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter inputfile name: ");
+            filename1 = sc.next();
+            // 2. ask user for output file name
+            System.out.println("Enter outputfile name: ");
+            filename2 = sc.next();
+        }
 
-        // 2. ask user for output file name
-        System.out.println("Enter outputfile name: ");
-        String filename2 = sc.next();
+        if (args.length == 2) {
+            filename1 = args[0];
+            filename2 = args[1];
+        }
+
+        if (args.length != 0 && args.length != 2) {
+            System.out.println("user error");
+            System.exit(1);
+        }
 
         // 3. open input file (Scanner)
         File input = new File(filename1);
@@ -34,7 +47,6 @@ public class FileName {
             strNum++;
         }
         // 7. close Scanner and PrintWrite
-        sc.close();
         in.close();
         output.close();
     }
