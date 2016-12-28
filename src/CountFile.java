@@ -16,7 +16,7 @@ public class CountFile {
         Scanner sc = new Scanner(f);
         //read the file and count characters, words and lines
         int numOfLines = 0;
-        int numOfwords = 0;
+        int numOfWords = 0;
         int numOfChar = 0;
         while(sc.hasNextLine()) {
             String s = sc.nextLine();
@@ -25,10 +25,10 @@ public class CountFile {
             Scanner strsc = new Scanner(s);
             while (strsc.hasNext()) {
                 strsc.next();
-                numOfwords++;
+                numOfWords++;
             }
         }
-        System.out.println("Number of line: " + numOfLines + ", words: " + numOfwords + ", chars: " + numOfChar);
+        System.out.println("Number of line: " + numOfLines + ", words: " + numOfWords + ", chars: " + numOfChar);
     }
 }
 
