@@ -13,20 +13,20 @@ public class WordList {
         String filename = in.next();
         //Open file by scanner with filename;
         File f = new File(filename);
-        Scanner sc = new Scanner(f);
+        Scanner textToCheck = new Scanner(f);
+        Scanner dictionary = new Scanner(System.in);
+        System.out.println("Input name of next file: ");
+        String newFile = dictionary.next();
         //read the file and wordlist
         int numOfWords = 0;
         int numOfMatches = 0;
-        while (sc.hasNextLine()) {
+        while (textToCheck.hasNextLine()) {
             // Ask user for file name
-            String next = sc.nextLine();
-            Scanner scanner1 = new Scanner(System.in);
-            System.out.println("Input next file name: ");
-            String newFile = scanner1.next();
+            String next = textToCheck.nextLine();
             File wordList = new File(newFile);
-            Scanner scanner2 = new Scanner(wordList);
-            while (scanner2.hasNext()) {
-                if (word.equals(scanner2.next())) {
+            Scanner wordlist = new Scanner(wordList);
+            while (wordlist.hasNext()) {
+                if (word.equals(wordlist.next())) {
 
                 }
             }
