@@ -22,8 +22,6 @@ public class WordList {
         String dictName = in.next();
 
         //read the file and check word with dictionary
-        int numOfWords = 0;
-        int numOfMatches = 0;
         while (textToCheck.hasNext()) {
             String next = textToCheck.next();
             File wordList = new File(dictName);
@@ -35,7 +33,9 @@ public class WordList {
                     break;
                 }
             }
-            System.out.println();
+            if (!found) {
+                System.out.println(next);
+            }
         }
     }
 }
