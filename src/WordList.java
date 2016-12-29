@@ -7,16 +7,18 @@ import java.util.Scanner;
  */
 public class WordList {
     public static void main(String[] args) throws FileNotFoundException {
+
         // Ask user for file name;
         Scanner in = new Scanner(System.in);
         System.out.println("Input file name: ");
         String filename = in.next();
-        //Open file by scanner with filename;
+
+        //Create scanner for text;
         File f = new File(filename);
         Scanner textToCheck = new Scanner(f);
-        Scanner dictionary = new Scanner(System.in);
         System.out.println("Input name of next file: ");
-        String newFile = dictionary.next();
+        String newFile = in.next();
+
         //read the file and wordlist
         int numOfWords = 0;
         int numOfMatches = 0;
@@ -24,9 +26,9 @@ public class WordList {
             // Ask user for file name
             String next = textToCheck.nextLine();
             File wordList = new File(newFile);
-            Scanner wordlist = new Scanner(wordList);
-            while (wordlist.hasNext()) {
-                if (word.equals(wordlist.next())) {
+            Scanner dictionary = new Scanner(wordList);
+            while (dictionary.hasNext()) {
+                if (word.equals(dictionary.next())) {
 
                 }
             }
