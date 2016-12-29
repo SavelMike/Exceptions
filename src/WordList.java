@@ -24,15 +24,21 @@ public class WordList {
         //read the file and check word with dictionary
         int numOfWords = 0;
         int numOfMatches = 0;
-        while (textToCheck.hasNextLine()) {
-            String next = textToCheck.nextLine();
+        while (textToCheck.hasNext()) {
+            String next = textToCheck.next();
             File wordList = new File(dictName);
             Scanner dictionary = new Scanner(wordList);
+            String word = "";
+            boolean found = false;
             while (dictionary.hasNext()) {
                 if (word.equals(dictionary.next())) {
-
+                    found = true;
+                    break;
                 }
             }
+        }
+
+        public boolean wordInDictionary(String ) {
 
         }
     }
