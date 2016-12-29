@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public class Find {
     public static void main(String[] args) throws FileNotFoundException {
+        // Проверяет что есть достаточно аргументов
         if (args.length < 2) {
             System.out.println("Not enough arguments.");
             System.exit(1);
@@ -14,7 +15,6 @@ public class Find {
 
         String word = args[0];
         for (int i = 1; i < args.length; i++ ) {
-            System.out.println(args[i]);
             File input = new File(args[i]);
             Scanner in = new Scanner(input);
             while (in.hasNextLine()) {
