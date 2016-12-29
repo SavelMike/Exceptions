@@ -28,18 +28,14 @@ public class WordList {
             String next = textToCheck.next();
             File wordList = new File(dictName);
             Scanner dictionary = new Scanner(wordList);
-            String word = "";
             boolean found = false;
             while (dictionary.hasNext()) {
-                if (word.equals(dictionary.next())) {
+                if (next.equals(dictionary.next())) {
                     found = true;
                     break;
                 }
             }
-        }
-
-        public boolean wordInDictionary(String ) {
-
+            System.out.println();
         }
     }
 }
