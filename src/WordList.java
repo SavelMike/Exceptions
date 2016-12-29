@@ -16,16 +16,17 @@ public class WordList {
         //Create scanner for text;
         File f = new File(filename);
         Scanner textToCheck = new Scanner(f);
-        System.out.println("Input name of next file: ");
-        String newFile = in.next();
 
-        //read the file and wordlist
+        //Get name of dictionary
+        System.out.println("Input name of dictionary: ");
+        String dictName = in.next();
+
+        //read the file and check word with dictionary
         int numOfWords = 0;
         int numOfMatches = 0;
         while (textToCheck.hasNextLine()) {
-            // Ask user for file name
             String next = textToCheck.nextLine();
-            File wordList = new File(newFile);
+            File wordList = new File(dictName);
             Scanner dictionary = new Scanner(wordList);
             while (dictionary.hasNext()) {
                 if (word.equals(dictionary.next())) {
