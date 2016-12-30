@@ -34,7 +34,7 @@ public class ReversedFile {
         PrintWriter prwOutput = new PrintWriter(strFilenameOup);
 
         // 5) Записывать строки с arrayList начиная с последней
-        for (int i = args.length ; i >= 0; i--) {
+        for (int i = args.length + 1; i >= 0; i--) {
             String strLine = arrList.get(i);
             prwOutput.println(strLine);
         }
