@@ -35,7 +35,13 @@ public class Reverse {
 
         //5. пройти по всем строкам array list-а и записать в файл
         for (int i = 0; i < arrList.size(); i++) {
-            prwOutput.println(arrList.get(i));
+            String strOrg = arrList.get(i);
+            String strRev = new String();
+            for (int j = strOrg.length() - 1; j >= 0; j--) {
+                strRev += strOrg.charAt(j);
+            }
+           // печатать развёрнутую строку
+            prwOutput.println(strRev);
             prwOutput.close();
         }
     }
